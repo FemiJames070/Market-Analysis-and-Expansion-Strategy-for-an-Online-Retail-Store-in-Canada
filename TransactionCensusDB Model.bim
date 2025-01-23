@@ -1,0 +1,405 @@
+{
+  "name": "SemanticModel",
+  "compatibilityLevel": 1200,
+  "model": {
+    "culture": "en-CA",
+    "dataSources": [
+      {
+        "name": "SqlServer FEMIJAMES TransactionCensusDB",
+        "connectionString": "Provider=SQLOLEDB;Data Source=FEMIJAMES;Integrated Security=SSPI;Persist Security Info=false;Initial Catalog=TransactionCensusDB",
+        "impersonationMode": "impersonateAccount",
+        "account": "femijames070@outlook.com",
+        "annotations": [
+          {
+            "name": "ConnectionEditUISource",
+            "value": "SqlServer"
+          }
+        ]
+      }
+    ],
+    "tables": [
+      {
+        "name": "Cleaned_Census_2021",
+        "columns": [
+          {
+            "name": "Country",
+            "dataType": "string",
+            "sourceColumn": "Country",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Topic",
+            "dataType": "string",
+            "sourceColumn": "Topic",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Characteristic",
+            "dataType": "string",
+            "sourceColumn": "Characteristic",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Total",
+            "dataType": "int64",
+            "sourceColumn": "Total",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Men",
+            "dataType": "int64",
+            "sourceColumn": "Men",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Women",
+            "dataType": "int64",
+            "sourceColumn": "Women",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Total2",
+            "dataType": "int64",
+            "sourceColumn": "Total2",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Men_2",
+            "dataType": "int64",
+            "sourceColumn": "Men_2",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Women_2",
+            "dataType": "int64",
+            "sourceColumn": "Women_2",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Cleaned_Census_2021",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[Cleaned_Census_2021].*   FROM [dbo].[Cleaned_Census_2021] ",
+              "dataSource": "SqlServer FEMIJAMES TransactionCensusDB"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[Cleaned_Census_2021].*   FROM [dbo].[Cleaned_Census_2021] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Cleaned_Census_2021"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Customers_Canada",
+        "columns": [
+          {
+            "name": "CustomerID",
+            "dataType": "string",
+            "sourceColumn": "CustomerID",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Country",
+            "dataType": "string",
+            "sourceColumn": "Country",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "FirstPurchaseDate",
+            "dataType": "dateTime",
+            "sourceColumn": "FirstPurchaseDate",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "LastPurchaseDate",
+            "dataType": "dateTime",
+            "sourceColumn": "LastPurchaseDate",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "TotalPurchases",
+            "dataType": "int64",
+            "sourceColumn": "TotalPurchases",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "TotalSpent",
+            "dataType": "double",
+            "sourceColumn": "TotalSpent",
+            "sourceProviderType": "Numeric"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Customers_Canada",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[Customers_Canada].*   FROM [dbo].[Customers_Canada] ",
+              "dataSource": "SqlServer FEMIJAMES TransactionCensusDB"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[Customers_Canada].*   FROM [dbo].[Customers_Canada] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Customers_Canada"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "InvoiceDetails_Canada",
+        "columns": [
+          {
+            "name": "InvoiceDetailID",
+            "dataType": "int64",
+            "sourceColumn": "InvoiceDetailID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "InvoiceID",
+            "dataType": "int64",
+            "sourceColumn": "InvoiceID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "StockCode",
+            "dataType": "string",
+            "sourceColumn": "StockCode",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Quantity",
+            "dataType": "int64",
+            "sourceColumn": "Quantity",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "UnitPrice",
+            "dataType": "double",
+            "sourceColumn": "UnitPrice",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "TotalPrice",
+            "dataType": "double",
+            "sourceColumn": "TotalPrice",
+            "sourceProviderType": "Numeric"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "InvoiceDetails_Canada",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[InvoiceDetails_Canada].*   FROM [dbo].[InvoiceDetails_Canada] ",
+              "dataSource": "SqlServer FEMIJAMES TransactionCensusDB"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[InvoiceDetails_Canada].*   FROM [dbo].[InvoiceDetails_Canada] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "InvoiceDetails_Canada"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Invoices_Canada",
+        "columns": [
+          {
+            "name": "InvoiceID",
+            "dataType": "int64",
+            "sourceColumn": "InvoiceID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "InvoiceNo",
+            "dataType": "string",
+            "sourceColumn": "InvoiceNo",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "InvoiceDate",
+            "dataType": "dateTime",
+            "sourceColumn": "InvoiceDate",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "CustomerID",
+            "dataType": "string",
+            "sourceColumn": "CustomerID",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "TotalQuantity",
+            "dataType": "int64",
+            "sourceColumn": "TotalQuantity",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "TotalAmount",
+            "dataType": "double",
+            "sourceColumn": "TotalAmount",
+            "sourceProviderType": "Numeric"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Invoices_Canada",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[Invoices_Canada].*   FROM [dbo].[Invoices_Canada] ",
+              "dataSource": "SqlServer FEMIJAMES TransactionCensusDB"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[Invoices_Canada].*   FROM [dbo].[Invoices_Canada] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Invoices_Canada"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Products_Canada",
+        "columns": [
+          {
+            "name": "StockCode",
+            "dataType": "string",
+            "sourceColumn": "StockCode",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Description",
+            "dataType": "string",
+            "sourceColumn": "Description",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "UnitPrice",
+            "dataType": "double",
+            "sourceColumn": "UnitPrice",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "TotalQuantitySold",
+            "dataType": "int64",
+            "sourceColumn": "TotalQuantitySold",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "TotalRevenue",
+            "dataType": "double",
+            "sourceColumn": "TotalRevenue",
+            "sourceProviderType": "Numeric"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Products_Canada",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[Products_Canada].*   FROM [dbo].[Products_Canada] ",
+              "dataSource": "SqlServer FEMIJAMES TransactionCensusDB"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[Products_Canada].*   FROM [dbo].[Products_Canada] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Products_Canada"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "99c715b1-bf20-4dad-9e73-dffedac881b7",
+        "fromTable": "InvoiceDetails_Canada",
+        "fromColumn": "InvoiceID",
+        "toTable": "Invoices_Canada",
+        "toColumn": "InvoiceID"
+      },
+      {
+        "name": "5baf5eba-f5e0-4e3a-970b-4efdf6f637de",
+        "fromTable": "InvoiceDetails_Canada",
+        "fromColumn": "StockCode",
+        "toTable": "Products_Canada",
+        "toColumn": "StockCode"
+      },
+      {
+        "name": "eae0ae0b-c729-40c1-b492-5eca6c8813a8",
+        "fromTable": "Invoices_Canada",
+        "fromColumn": "CustomerID",
+        "toTable": "Customers_Canada",
+        "toColumn": "CustomerID"
+      },
+      {
+        "name": "67a89c58-2fff-413c-bc55-7e826be5994e",
+        "fromTable": "Cleaned_Census_2021",
+        "fromColumn": "Country",
+        "toTable": "Customers_Canada",
+        "toColumn": "CustomerID"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "400"
+      }
+    ]
+  },
+  "id": "SemanticModel"
+}
