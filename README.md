@@ -1,4 +1,4 @@
-# Marketing-Analytics
+# TransactionCensusDB Marketing/Advanced Data-Analytics
 ## Data Analysis Project: SQL to SSIS to Power BI Integration with Python Predictions
 
 ## Introduction
