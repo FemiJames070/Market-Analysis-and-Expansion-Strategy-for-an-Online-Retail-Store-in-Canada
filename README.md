@@ -82,23 +82,51 @@ Extract, transform, and load data from multiple sources into the SQL Server data
 
 ---
 
-## Step 3: Integrating SQL with Power BI
+## Step 3: Visualizing Data in Power BI
 ### Objective
-Visualize SQL data in Power BI for actionable insights.
+Create interactive dashboards and reports to visualize insights from the data.
 
-### Process
-1. **Connect to SQL Server**:
-   - Use the "Get Data" option in Power BI to connect to the SQL Server database.
+### Key Dashboards
+1. **Customer Purchase Summary**:
+   - **Insights**:
+     - Total quantity purchased: **2,763 units**
+     - Total revenue: **$2,515,932.54**
+     - Most active customer: **CustomerID 17444**, accounting for over **2,119 units**.
+   - **Visuals**:
+     - Bar charts showing top purchases by customers.
+     - Time analysis of purchases showing peak months like **June** and **July**.
 
-2. **Data Transformation**:
-   - Use Power Query to shape and transform data for analysis.
-   - Merge tables using relationships defined in SQL.
+2. **Top Products by Customers**:
+   - Visualizations of the top three products purchased by each customer:
+     - **CustomerID 17444**: World War 2 Gliders (288 units).
+     - **CustomerID 17443**: Retro Coffee Mugs (504 units).
 
-3. **Create Visualizations**:
-   - Design dashboards and reports for KPIs, trends, and performance metrics.
+3. **Census Insights**:
+   - **Age Analysis**:
+     - Average age of men: **41 years**.
+     - Average age of women: **42.8 years**.
+   - **Income Characteristics**:
+     - Average income of men: **$43K** (after tax).
+     - Average income of women: **$40K** (after tax).
+   - **Industry Distribution**:
+     - Most common industries: Healthcare, Retail Trade, Professional Services.
 
-4. **Publish Reports**:
-   - Publish dashboards to the Power BI service for sharing and collaboration.
+4. **Household Analysis**:
+   - Household classifications, including multigenerational households and household types with subsidized housing.
+   - Summary of room characteristics: Majority have **3 bedrooms** or **4+ rooms**.
+
+### Summary Tables
+- **Customer Metrics**:
+  | CustomerID | Total Purchases | Total Spent ($) | First Purchase | Last Purchase |
+  |------------|-----------------|-----------------|----------------|---------------|
+  | 17444      | 3               | 1,872,984.10    | 20/06/2011     | 15/07/2011    |
+  | 15388      | 1               | 1,815.44        | 14/03/2011     | 14/03/2011    |
+
+- **Product Metrics**:
+  | Description                             | Quantity | Total Revenue ($) |
+  |-----------------------------------------|----------|-------------------|
+  | World War 2 Gliders                     | 288      | 10,000+           |
+  | Retro Coffee Mugs                       | 504      | 534.24            |
 
 ---
 
@@ -157,7 +185,7 @@ Leverage Python for advanced analytics and predictions using data exported from 
 
 ---
 
-## README
+## README Template
 ### Project Overview
 - **Title**: SQL to SSIS to Power BI Integration with Python Predictions
 - **Description**: A comprehensive workflow integrating SQL database design, SSIS ETL, Power BI visualization, and Python-based predictions.
@@ -172,13 +200,23 @@ Leverage Python for advanced analytics and predictions using data exported from 
 1. Set up the SQL database using provided scripts.
 2. Build and deploy the SSIS package for ETL.
 3. Connect Power BI to the SQL Server.
-4. Export data from Power BI and run Python scripts for predictions.
+4. Explore the dashboards and insights in Power BI.
+5. Export data from Power BI and run Python scripts for predictions.
 
 ### Outputs
 - SQL-based relational database.
 - SSIS ETL package.
-- Power BI dashboards.
+- Power BI dashboards:
+  - Customer Purchase Summary
+  - Top Products by Customers
+  - Census Insights
+  - Household Analysis
 - Python-generated predictions.
 
 ### Contribution
 Contributions are welcome! Submit a pull request with proposed changes or improvements.
+
+### License
+This project is licensed under the MIT License.
+
+---
