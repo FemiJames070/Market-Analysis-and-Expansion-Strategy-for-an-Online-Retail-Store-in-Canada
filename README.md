@@ -132,7 +132,7 @@ Create interactive dashboards and reports to visualize insights from the data.
 
 ## Step 4: Predictive Modeling with Python
 ### Objective
-Leverage Python for advanced analytics and predictions using data exported from Power BI.
+Leverage Python for advanced analytics and predictions using data exported from Power BI. Build machine learning models to predict sales and customer purchase behavior, integrating demographic and transactional data for enhanced insights.
 
 ### Process
 1. **Export Data**:
@@ -155,14 +155,17 @@ Leverage Python for advanced analytics and predictions using data exported from 
    data = pd.read_csv('sales_data.csv')
 
    # Feature selection
-   X = data[['CustomerID', 'TotalAmount']]
-   y = data['SalesPrediction']
+   X = online_retail_canada[['Quantity', 'UnitPrice', 'TotalPopulation', 'AverageIncome', 'RetailEmployment', 'HouseholdOwnership', 'PublicTransitUsers',       'WorkFromHome', 'PurchaseMonth', 'PurchaseYear', 'PurchaseDuration', 'IncomePerCapita', 'RetailEmploymentRate']]
+   y = online_retail_canada['TotalAmount']
 
    # Split data
    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
    # Train model
-   model = LinearRegression()
+   model = RandomForestRegressor()
+   model.fit(X_train, y_train)
+   
+   model = RandomForestClassifier()
    model.fit(X_train, y_train)
 
    # Evaluate model
@@ -212,6 +215,8 @@ Leverage Python for advanced analytics and predictions using data exported from 
   - Census Insights
   - Household Analysis
 - Python-generated predictions.
+   - Sales predictions (Predictions_with_Census_Data_Canada.csv)
+   - Customer purchase behavior classification.
 
 ### Contribution
 Contributions are welcome! Submit a pull request with proposed changes or improvements.
