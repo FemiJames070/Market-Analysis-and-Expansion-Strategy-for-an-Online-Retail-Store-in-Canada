@@ -1,4 +1,4 @@
-# TransactionCensusDB Marketing/Advanced Data-Analytics
+# Market Analysis and Expansion Strategy for an Online Retail Store in Canada
 ## Data Analysis Project: SQL to SSIS to Power BI Integration with Python Predictions
 
 ## Introduction
